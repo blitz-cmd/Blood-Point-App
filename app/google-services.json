@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "248829952135",
+    "project_id": "blood-point-5fb02",
+    "storage_bucket": "blood-point-5fb02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248829952135:android:286a371b4e29f8631cb822",
+        "android_client_info": {
+          "package_name": "com.example.bloodpoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248829952135-5rq058h9g4ue2t34s9qb9tvgv9vip5ar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloodpoint",
+            "certificate_hash": "50af3e2b701f447b1f401ac6facf3e33f5849e52"
+          }
+        },
+        {
+          "client_id": "248829952135-kp0q0prhai0q5k76uplcf4uvhadqptml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASIo1zA8a8ubfh8HigU81dqswhYuzVMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248829952135-kp0q0prhai0q5k76uplcf4uvhadqptml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
