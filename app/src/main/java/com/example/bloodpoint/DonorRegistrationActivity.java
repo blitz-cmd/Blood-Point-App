@@ -195,7 +195,6 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                                                         String imageUrl = uri.toString();
                                                         Map newImageMap = new HashMap();
                                                         newImageMap.put("profilepictureurl", imageUrl);
-
                                                         userDatabaseRef.updateChildren(newImageMap).addOnCompleteListener(new OnCompleteListener() {
                                                             @Override
                                                             public void onComplete(@NonNull Task task) {
