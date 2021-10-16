@@ -18,7 +18,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,9 +44,10 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         app:headerLayout="@layout/header"
-        app:menu=""
-        app:itemIconTint=""
-        app:itemTextColor=""
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+        app:itemIconTint="@drawable/navigation_selector"
+        app:itemTextColor="@drawable/navigation_view_item_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

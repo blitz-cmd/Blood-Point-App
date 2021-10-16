@@ -40,24 +40,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class DonorRegistrationActivity extends AppCompatActivity {
 
     private TextView backButton;
-
     private CircleImageView profile_image;
-
-    private TextInputEditText registerFullName,registerIdNumber,
-            registerPhoneNumber, registerEmail, registerPassword;
-
+    private TextInputEditText registerFullName,registerIdNumber,registerPhoneNumber, registerEmail, registerPassword;
     private Spinner bloodGroupsSpinner;
-
     private Button registerButton;
-
     private Uri resultUri;
-
     private ProgressDialog loader;
-
     private FirebaseAuth mAuth;
     private DatabaseReference userDatabaseRef;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,12 +134,10 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                             }
                             else {
                                 String currentUserId = mAuth.getCurrentUser().getUid();
-                                Toast.makeText(DonorRegistrationActivity.this, currentUserId, Toast.LENGTH_SHORT).show();
-//                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
-//                                        .child("users").child(currentUserId);
-                                DatabaseReference userDatabaseRef = FirebaseDatabase.getInstance().getReference();
+                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
+                                        .child("users").child(currentUserId);
                                 userDatabaseRef.child("users").child(currentUserId);
-                                HashMap<String,Object> userInfo = new HashMap<>();
+                                HashMap userInfo = new HashMap();
                                 userInfo.put("id", currentUserId);
                                 userInfo.put("name", fullName);
                                 userInfo.put("email", email);
