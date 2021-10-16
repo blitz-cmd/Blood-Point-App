@@ -144,8 +144,11 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                             }
                             else {
                                 String currentUserId = mAuth.getCurrentUser().getUid();
-                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
-                                        .child("users").child(currentUserId);
+                                Toast.makeText(DonorRegistrationActivity.this, currentUserId, Toast.LENGTH_SHORT).show();
+//                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
+//                                        .child("users").child(currentUserId);
+                                DatabaseReference userDatabaseRef = FirebaseDatabase.getInstance().getReference();
+                                userDatabaseRef.child("users").child(currentUserId);
                                 HashMap<String,Object> userInfo = new HashMap<>();
                                 userInfo.put("id", currentUserId);
                                 userInfo.put("name", fullName);
