@@ -212,6 +212,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
         switch (item.getItemId()){
+
+            case R.id.compatible:
+                Intent intent11 = new Intent(MainActivity.this, CategorySelectedActivity.class);
+                intent11.putExtra("group", "Compatible with me");
+                startActivity(intent11);
+                break;
+
             case R.id.aplus:
                 Intent intent3 = new Intent(MainActivity.this, CategorySelectedActivity.class);
                 intent3.putExtra("group", "A+");
