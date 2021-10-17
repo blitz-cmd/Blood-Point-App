@@ -128,7 +128,7 @@ public class RecipientRegistrationActivity extends AppCompatActivity {
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
                                 String error=task.getException().toString();
-                                Toast.makeText(RecipientRegistrationActivity.this,"Error1"+error,Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RecipientRegistrationActivity.this,"Error: "+error,Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 String currentUserId=mAuth.getCurrentUser().getUid();
@@ -147,7 +147,7 @@ public class RecipientRegistrationActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull @NotNull Task task) {
                                         if(task.isSuccessful()){
-                                            Toast.makeText(RecipientRegistrationActivity.this, "Data set successfullt", Toast.LENGTH_SHORT).show();
+//                                            Toast.makeText(RecipientRegistrationActivity.this, "Data set successfullt", Toast.LENGTH_SHORT).show();
                                         }else{
                                             Toast.makeText(RecipientRegistrationActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                         }
@@ -172,7 +172,7 @@ public class RecipientRegistrationActivity extends AppCompatActivity {
                                     uploadTask.addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull @NotNull Exception e) {
-                                            Toast.makeText(RecipientRegistrationActivity.this, "image upload failed", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RecipientRegistrationActivity.this, "Image Upload Failed", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                     uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -190,7 +190,7 @@ public class RecipientRegistrationActivity extends AppCompatActivity {
                                                             @Override
                                                             public void onComplete(@NonNull @NotNull Task task) {
                                                                 if(task.isSuccessful()){
-                                                                    Toast.makeText(RecipientRegistrationActivity.this, "image url added to database succesfuly", Toast.LENGTH_SHORT).show();
+//                                                                    Toast.makeText(RecipientRegistrationActivity.this, "image url added to database succesfuly", Toast.LENGTH_SHORT).show();
                                                                 }else {
                                                                     Toast.makeText(RecipientRegistrationActivity.this,task.getException().toString(), Toast.LENGTH_SHORT).show();
                                                                 }
@@ -202,11 +202,13 @@ public class RecipientRegistrationActivity extends AppCompatActivity {
                                             }
                                         }
                                     });
-                                    Intent intent=new Intent(RecipientRegistrationActivity.this,MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                    loader.dismiss();
+
                                 }
+                                Intent intent=new Intent(RecipientRegistrationActivity.this,MainActivity.class);
+                                Toast.makeText(RecipientRegistrationActivity.this, "Recipient Successfully Registered", Toast.LENGTH_SHORT).show();
+                                startActivity(intent);
+                                finish();
+                                loader.dismiss();
 
                             }
                         }

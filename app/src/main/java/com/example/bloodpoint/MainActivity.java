@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity
                 progressbar.setVisibility(View.GONE);
 
                 if (userList.isEmpty()){
-                    Toast.makeText(MainActivity.this, "No donors", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "No Donor Available", Toast.LENGTH_SHORT).show();
                     progressbar.setVisibility(View.GONE);
                 }
             }
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity
                 progressbar.setVisibility(View.GONE);
 
                 if (userList.isEmpty()){
-                    Toast.makeText(MainActivity.this, "No recipients", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "No Recipient Available", Toast.LENGTH_SHORT).show();
                     progressbar.setVisibility(View.GONE);
                 }
             }

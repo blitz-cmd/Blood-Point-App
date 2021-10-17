@@ -103,11 +103,11 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                     return;
                 }
                 if (TextUtils.isEmpty(fullName)){
-                    registerFullName.setError("Full name is required is required!");
+                    registerFullName.setError("Full Name is required is required!");
                     return;
                 }
                 if (TextUtils.isEmpty(idNumber)){
-                    registerIdNumber.setError("Id Number is required!");
+                    registerIdNumber.setError("Adhaar Number is required!");
                     return;
                 }
                 if (TextUtils.isEmpty(phoneNumber)){
@@ -130,7 +130,7 @@ public class DonorRegistrationActivity extends AppCompatActivity {
 
                             if (!task.isSuccessful()){
                                 String error = task.getException().toString();
-                                Toast.makeText(DonorRegistrationActivity.this, "Error" + error, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DonorRegistrationActivity.this, "Error: " + error, Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 String currentUserId = mAuth.getCurrentUser().getUid();
@@ -151,7 +151,7 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task task) {
                                         if (task.isSuccessful()){
-                                            Toast.makeText(DonorRegistrationActivity.this, "Data set Successfully", Toast.LENGTH_SHORT).show();
+//                                            Toast.makeText(DonorRegistrationActivity.this, "Data set Successfully", Toast.LENGTH_SHORT).show();
                                         }else {
                                             Toast.makeText(DonorRegistrationActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                         }
@@ -199,7 +199,7 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                                                             @Override
                                                             public void onComplete(@NonNull Task task) {
                                                                 if (task.isSuccessful()){
-                                                                    Toast.makeText(DonorRegistrationActivity.this, "Image url added to database successfully", Toast.LENGTH_SHORT).show();
+//                                                                    Toast.makeText(DonorRegistrationActivity.this, "Image url added to database successfully", Toast.LENGTH_SHORT).show();
                                                                 }else {
                                                                     Toast.makeText(DonorRegistrationActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                                                 }
@@ -214,11 +214,13 @@ public class DonorRegistrationActivity extends AppCompatActivity {
                                         }
                                     });
 
-                                    Intent intent = new Intent(DonorRegistrationActivity.this, MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                    loader.dismiss();
+
                                 }
+                                Intent intent = new Intent(DonorRegistrationActivity.this, MainActivity.class);
+                                Toast.makeText(DonorRegistrationActivity.this, "Donor Sucessfully Registered", Toast.LENGTH_SHORT).show();
+                                startActivity(intent);
+                                finish();
+                                loader.dismiss();
                             }
 
                         }

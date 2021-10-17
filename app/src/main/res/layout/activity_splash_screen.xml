@@ -26,9 +26,9 @@
             android:src="@drawable/applogo"/>
         <TextView
             android:id="@+id/title"
-            android:text="Blood Point App"
+            android:text="Blood Point"
             android:textColor="#000"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginStart="20dp"
@@ -37,9 +37,9 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/slogan"
-            android:text="Donate blood and save lives!"
+            android:text="Donate Blood and Save Lives!"
             android:textColor="#000"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginTop="5dp"
@@ -49,7 +49,7 @@
             android:id="@+id/developer"
             android:text="Developed by Ojas, Deep and Prathmesh"
             android:textColor="#000"
-            android:textSize="10sp"
+            android:textSize="17sp"
             android:textStyle="normal"
             android:gravity="center"
             android:layout_gravity="bottom"
